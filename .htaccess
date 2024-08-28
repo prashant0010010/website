@@ -1,0 +1,15 @@
+# Enable Rewrite Engine
+RewriteEngine On
+
+# Redirect old URLs to new URLs
+Redirect 301 /index.html /home
+Redirect 301 /about.html /about
+Redirect 301 /articles/article.html /articles/article
+Redirect 301 /articles/article4.html /articles/article4
+Redirect 301 /articles/article5.html /articles/article5
+Redirect 301 /articles/article1.html /articles/article1
+
+# Handle other URL rewrites
+RewriteRule ^home$ /index.html [L]
+RewriteRule ^about$ /about.html [L]
+RewriteRule ^articles/(.*)$ /articles/$1 [L]
